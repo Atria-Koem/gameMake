@@ -1,0 +1,145 @@
+<div id="InterPlayer">
+	<input type="text" id="InputTeamName" value="Input Name">
+	<button onclick="createTeam()" class="Main">
+		<div class="ButtonOutLine"></div>
+		Team Name Apply
+	</button></div>
+<div id="PlayerView">
+	<div id="TeamData">
+		<div id="TeamName"></div>
+		<div id="TeamFunds"></div>
+	</div>
+<ul class="MenuTabs Horizontal">
+	<li data-conectTab="BattleView"><a>Battle Page</a></li>
+	<li data-conectTab="ActiveView"><a>Active Page</a></li>
+	<li class="activeTab" data-conectTab="MainView"><a>Main Page</a></li>
+	<li data-conectTab="CharacterView"><a>Characters</a></li>
+	<li data-conectTab="TownView"><a>Town</a></li>
+	<li data-conectTab="InventoryView"><a>Inventory</a></li>
+</ul>
+<div class="MenuContainer Horizontal">
+	<div id="BattleView" class="TabDataView">
+		<div style="display : flex">
+		<div id="BattleField">
+			<div id="enemyBorder"></div>
+			<div id="SkillBorder" class="SkillBorder"></div>
+			<div id="playerBorder" class="Border"></div>
+		</div>
+		<div id="BattleLogView" class="LogView">
+		</div>
+	</div>
+	</div>
+	<div id="MapView" class="TabDataView">Map</div>	
+	<div id="ActiveView" class="TabDataView">
+		<div style="display : flex">
+			<div class="containerMap">
+				<div id="Map"><canvas id="MapDraw"></canvas></div>
+				<div id="MiniMap"><canvas id="MiniMapDraw"></canvas></div>
+			</div>		
+			<div id="inPlayedCharacter">
+			</div>
+			<div id="MapLogView" class="LogView"></div>
+		</div>	
+	</div>
+	<div id="MainView" class="TabDataView">
+		<div id="Area">
+			<div class="Select"><div class="Text">Map</div>
+				<select id="AreaSelect">
+					<option value="10000">-Goblin Field</option>
+					<option value="10001" selected>--Goblin to Asobi</option >
+					<option value="10002">--Stronger Goblin </option>
+					<option value="Infinity"
+			  style="display:none;">Infinity</option>
+				</select>
+				<select id="AreaLevel">
+					<option value="0">0</option>
+				</select>
+				<div  class="Text">Level</div>
+			</div>
+  <div>
+		<button onclick="createMapData()"  class="Main"><div class="ButtonOutLine"></div>
+			MapCreate</button></div>
+			<div>
+				<button onclick="search()" class="Main"><div class="ButtonOutLine" ></div>
+					EnemySearch
+				</button></div>
+			<div>
+				<button onclick="new BattleData" class="Main"><div class="ButtonOutLine"></div>
+					Battle
+				</button></div>
+		</div>
+	</div>
+	<div id="CharacterView" class="TabDataView">
+		<div id="CharacterList">
+		</div>
+		<div id="CharacterDesk" class="CharacterBorder"></div>
+	</div>
+	<div id="TownView" class="TabDataView">
+		<div class="Town">
+		<ul class="MenuTabs Vertical">
+			<li class="activeTab" data-conectTab="HireMenu"><a>Hire</a></li>
+			<li data-conectTab="BuyMenu"><a>Buy</a></li>
+			<li data-conectTab="SellMenu"><a>Sell</a></li>
+			<li data-conectTab="RefairMenu"><a>Refair</a></li>
+		</ul>
+		<div class="MenuContainer Vertical">
+			<div id="HireMenu" class="TabDataView">
+				<div>
+					<a>Hire Grade</a>
+					<div>
+						<div>
+							<a>Normal</a>
+							<a>Funds : 100</a>
+							<input id="normalHire" type="radio" name="HireGrade" value="normal">
+							<label for="normalHire"></label>
+						</div>
+					</div>
+				</div>
+				<input type="text" id="HireName">
+				<button onclick="new CharacterHire" class="Main">
+					<div class="ButtonOutLine"></div>
+					New Character Hire
+				</button>
+			</div>
+			<div id="BuyMenu" class="TabDataView">
+				<div><p> Good Mer</p></div>
+				<div class="Stand">
+					<div class="ItemData">		
+						<input type="checkbox" id="IT000000000100" class="ItemCheckBox">
+						<label class="ItemLabel" for="IT000000000100">
+							<div><div class="ItemSelecter"></div></div>
+							<div class="Funds"><p>$ 10</p></div>
+							<div class="ItemInfoText"><p class="ItemName">Short Sword(Sword)</p><p class="ItemCount">x1</p><p> / </p><p class="atkPhy">10</p><p> / </p><p class="ItemOption">Simple Sword</p></div>
+						</label>
+					</div>
+					<div class="ItemData">		
+						<input type="checkbox" id="IT000000000101" class="ItemCheckBox">
+						<label class="ItemLabel" for="IT000000000101">
+							<div><div class="ItemSelecter"></div></div>
+							<div class="Funds"><p>$ 10</p></div>
+							<div class="ItemInfoText"><p class="ItemName">Short Sword(Sword)</p><p class="ItemCount">x1</p><p> / </p><p class="atkPhy">10</p><p> / </p><p class="ItemOption">Simple Sword</p></div>
+						</label>
+					</div>
+					<div class="ItemData">		
+						<input type="checkbox" id="IT000000000102" class="ItemCheckBox">
+						<label class="ItemLabel" for="IT000000000102">
+							<div><div class="ItemSelecter"></div></div>
+							<div class="Funds"><p>$ 10</p></div>
+							<div class="ItemInfoText"><p class="ItemName">Short Sword(Sword)</p><p class="ItemCount">x1</p><p> / </p><p class="atkPhy">10</p><p> / </p><p class="ItemOption">Simple Sword</p></div>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div id="SellMenu" class="TabDataView">
+				Test
+			</div>
+			<div id="RefairMenu" class="TabDataView">
+				Test
+			</div>
+		</div>
+	</div>
+	</div>
+<div id="InventoryView" class="TabDataView">4</div>
+
+</div>
+</div>
